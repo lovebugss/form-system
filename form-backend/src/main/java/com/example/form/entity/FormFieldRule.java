@@ -11,41 +11,21 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 表单数据;
+ * 字段规则;
  *
  * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
  * @date : 2023-7-9
  */
-@ApiModel(value = "表单数据", description = "")
-@TableName("form_data")
+@ApiModel(value = "字段规则", description = "")
+@TableName("form_field_rule")
 @Data
-public class FormData implements Serializable {
+public class FormFieldRule implements Serializable {
     /**
-     * 主键ID;注解ID
+     * 主键ID;主键ID
      */
-    @ApiModelProperty(name = "主键ID", notes = "注解ID")
+    @ApiModelProperty(name = "主键ID", notes = "主键ID")
     @TableId(type = IdType.AUTO)
     private Integer id;
-    /**
-     * 表单项ID
-     */
-    @ApiModelProperty(name = "表单项ID", notes = "")
-    private Integer fieldId;
-    /**
-     * 内容
-     */
-    @ApiModelProperty(name = "内容", notes = "")
-    private String data;
-    /**
-     * 用户
-     */
-    @ApiModelProperty(name = "用户", notes = "")
-    private String userId;
-    /**
-     * 版本ID
-     */
-    @ApiModelProperty(name = "版本ID", notes = "")
-    private String versionId;
     /**
      * 创建人;创建人
      */

@@ -11,15 +11,15 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 表单数据;
+ * 字段逻辑;
  *
  * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
  * @date : 2023-7-9
  */
-@ApiModel(value = "表单数据", description = "")
-@TableName("form_data")
+@ApiModel(value = "字段逻辑", description = "")
+@TableName("form_field_logic")
 @Data
-public class FormData implements Serializable {
+public class FormFieldLogic implements Serializable {
     /**
      * 主键ID;注解ID
      */
@@ -27,24 +27,34 @@ public class FormData implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer id;
     /**
-     * 表单项ID
+     * 字段ID
      */
-    @ApiModelProperty(name = "表单项ID", notes = "")
+    @ApiModelProperty(name = "字段ID", notes = "")
     private Integer fieldId;
     /**
-     * 内容
+     * 条件字段ID
      */
-    @ApiModelProperty(name = "内容", notes = "")
-    private String data;
+    @ApiModelProperty(name = "条件字段ID", notes = "")
+    private String conditionalFieldId;
     /**
-     * 用户
+     * 条件运算符
      */
-    @ApiModelProperty(name = "用户", notes = "")
-    private String userId;
+    @ApiModelProperty(name = "条件运算符", notes = "")
+    private String conditionalOperator;
     /**
-     * 版本ID
+     * 条件值
      */
-    @ApiModelProperty(name = "版本ID", notes = "")
+    @ApiModelProperty(name = "条件值", notes = "")
+    private String conditionalValue;
+    /**
+     * 计算表达式
+     */
+    @ApiModelProperty(name = "计算表达式", notes = "")
+    private String calculationExpression;
+    /**
+     * 版本id
+     */
+    @ApiModelProperty(name = "版本id", notes = "")
     private String versionId;
     /**
      * 创建人;创建人

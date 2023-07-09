@@ -1,6 +1,10 @@
 package com.example.form.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.form.enums.FormStatus;
+import com.example.form.enums.FormType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -11,63 +15,68 @@ import java.time.LocalDateTime;
 /**
  * 表单;
  *
- * @author : http://www.chiner.pro
- * @date : 2023-5-16
+ * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
+ * @date : 2023-7-9
  */
-@Data
 @ApiModel(value = "表单", description = "")
 @TableName("form")
+@Data
 public class Form implements Serializable {
     /**
      * ID
      */
-    @ApiModelProperty(name = "ID", notes = "ID")
+    @ApiModelProperty(name = "ID", notes = "")
+    @TableId(type = IdType.AUTO)
     private Integer id;
     /**
-     * 创建人
+     * 表单标题
      */
-    @ApiModelProperty(name = "创建人", notes = "创建人")
-    private Integer createdBy;
-    /**
-     * 创建时间
-     */
-    @ApiModelProperty(name = "创建时间", notes = "创建时间")
-    private LocalDateTime createdTime;
-    /**
-     * 更新人
-     */
-    @ApiModelProperty(name = "更新人", notes = "更新人")
-    private Integer updatedBy;
-    /**
-     * 更新时间
-     */
-    @ApiModelProperty(name = "更新时间", notes = "更新时间")
-    private LocalDateTime updatedTime;
-    /**
-     * 表单名称
-     */
-    @ApiModelProperty(name = "表单名称", notes = "表单名称")
-    private String name;
+    @ApiModelProperty(name = "表单标题", notes = "")
+    private String formTitle;
     /**
      * 表单描述
      */
-    @ApiModelProperty(name = "表单描述", notes = "表单描述")
-    private String desc;
+    @ApiModelProperty(name = "表单描述", notes = "")
+    private String description;
     /**
      * 表单类型;表单类型
      */
     @ApiModelProperty(name = "表单类型", notes = "表单类型")
-    private String type;
-
+    private FormType type;
     /**
-     * 表单状态， 草稿， 发布中， 停止使用
+     * 表单状态
      */
-    @ApiModelProperty(name = "表单状态", notes = "表单状态")
-    private String status;
-
+    @ApiModelProperty(name = "表单状态", notes = "")
+    private FormStatus status;
     /**
-     * 表达过期时间
+     * 表单开始时间
      */
-    @ApiModelProperty(name = "表单过期时间", notes = "表单过期时间")
-    private LocalDateTime expireTime;
+    @ApiModelProperty(name = "表单开始时间", notes = "")
+    private LocalDateTime startTime;
+    /**
+     * 表单结束时间
+     */
+    @ApiModelProperty(name = "表单结束时间", notes = "")
+    private LocalDateTime endTime;
+    /**
+     * 创建人
+     */
+    @ApiModelProperty(name = "创建人", notes = "")
+    private Integer createdBy;
+    /**
+     * 创建时间
+     */
+    @ApiModelProperty(name = "创建时间", notes = "")
+    private LocalDateTime createdTime;
+    /**
+     * 更新人
+     */
+    @ApiModelProperty(name = "更新人", notes = "")
+    private Integer updatedBy;
+    /**
+     * 更新时间
+     */
+    @ApiModelProperty(name = "更新时间", notes = "")
+    private LocalDateTime updatedTime;
+
 }

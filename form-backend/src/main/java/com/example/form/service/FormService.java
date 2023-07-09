@@ -1,57 +1,23 @@
 package com.example.form.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.form.entity.Form;
 
 /**
- * 表单;(form)表服务接口
- *
- * @author : http://www.chiner.pro
- * @date : 2023-5-16
+ * - 表单;(form)表服务接口
+ * - @author : <a [href="mailto:r979668507@gmail.com](mailto:href=%22mailto:r979668507@gmail.com)">renjp</a>
+ * - @date: 2023-7-9
  */
-public interface FormService {
+public interface FormService extends IService<Form> {
+
 
     /**
-     * 通过ID查询单条数据
+     * 检查表单状态
+     * 1. 表单是否存在
+     * 2. 表单是否已经发布
+     * 3. 表单是否已经过期
      *
-     * @param id 主键
-     * @return 实例对象
+     * @param formId
      */
-    Form queryById(Integer id);
-
-    /**
-     * 分页查询
-     *
-     * @param form    筛选条件
-     * @param current 当前页码
-     * @param size    每页大小
-     * @return
-     */
-    Page<Form> paginQuery(Form form, long current, long size);
-
-    /**
-     * 新增数据
-     *
-     * @param form 实例对象
-     * @return 实例对象
-     */
-    Form insert(Form form);
-
-    /**
-     * 更新数据
-     *
-     * @param form 实例对象
-     * @return 实例对象
-     */
-    Form update(Form form);
-
-    /**
-     * 通过主键删除数据
-     *
-     * @param id 主键
-     * @return 是否成功
-     */
-    boolean deleteById(String id);
-
-    Form changeFormStatus(Integer id, String status);
+    Form checkFormStatus(String formId);
 }

@@ -11,15 +11,15 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 表单数据;
+ * 表单字段类型;
  *
  * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
  * @date : 2023-7-9
  */
-@ApiModel(value = "表单数据", description = "")
-@TableName("form_data")
+@ApiModel(value = "表单字段类型", description = "")
+@TableName("form_field_types")
 @Data
-public class FormData implements Serializable {
+public class FormFieldTypes implements Serializable {
     /**
      * 主键ID;注解ID
      */
@@ -27,25 +27,15 @@ public class FormData implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer id;
     /**
-     * 表单项ID
+     * 类型名称
      */
-    @ApiModelProperty(name = "表单项ID", notes = "")
-    private Integer fieldId;
+    @ApiModelProperty(name = "类型名称", notes = "")
+    private String typeName;
     /**
-     * 内容
+     * 分组
      */
-    @ApiModelProperty(name = "内容", notes = "")
-    private String data;
-    /**
-     * 用户
-     */
-    @ApiModelProperty(name = "用户", notes = "")
-    private String userId;
-    /**
-     * 版本ID
-     */
-    @ApiModelProperty(name = "版本ID", notes = "")
-    private String versionId;
+    @ApiModelProperty(name = "分组", notes = "")
+    private String typeGroup;
     /**
      * 创建人;创建人
      */

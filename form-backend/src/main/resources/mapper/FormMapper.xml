@@ -3,6 +3,6 @@
 
 <mapper namespace="com.example.form.mapper.FormMapper">
     <select id="selectByPage" resultType="com.example.form.entity.Form">
-        select * from user ${ew.customSqlSegment}
+        select * from form ${ew.customSqlSegment}
     </select>
 </mapper>

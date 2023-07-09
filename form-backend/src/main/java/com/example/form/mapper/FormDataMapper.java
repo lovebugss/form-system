@@ -11,8 +11,8 @@ import org.apache.ibatis.annotations.Param;
 /**
  * 表单数据;(form_data)表数据库访问层
  *
- * @author : http://www.chiner.pro
- * @date : 2023-5-16
+ * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
+ * @date : 2023-7-9
  */
 @Mapper
 public interface FormDataMapper extends BaseMapper<FormData> {
