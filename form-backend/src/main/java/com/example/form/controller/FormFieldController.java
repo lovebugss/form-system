@@ -1,8 +1,7 @@
 package com.example.form.controller;
 
-import com.example.form.service.FormFieldsService;
+import com.example.form.service.FormFieldService;
 import io.swagger.annotations.Api;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/form/field")
 public class FormFieldController {
-    @Autowired
-    private FormFieldsService formFieldsService;
+    private final FormFieldService formFieldService;
+
+    public FormFieldController(FormFieldService formFieldService) {
+        this.formFieldService = formFieldService;
+    }
 }

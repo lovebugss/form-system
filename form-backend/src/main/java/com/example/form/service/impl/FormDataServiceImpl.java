@@ -12,6 +12,7 @@ import com.example.form.result.ErrorCode;
 import com.example.form.service.FormDataService;
 import com.example.form.service.FormService;
 import com.example.form.service.form.FormHandler;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Service;
 
@@ -22,22 +23,20 @@ import org.springframework.stereotype.Service;
  * @date : 2023-7-9
  */
 @Service
+@RequiredArgsConstructor
 public class FormDataServiceImpl extends ServiceImpl<FormDataMapper, FormData> implements FormDataService {
 
-    private FormService formService;
-    private ObjectProvider<FormHandler> formHandlerObjectProvider;
+    private final FormService formService;
+    private final ObjectProvider<FormHandler> formHandlerObjectProvider;
 
     @Override
     public SubmitFormDataVo submit(SubmitFormDataRequest request) {
 
         // 检查表单是否存在
         Form form = formService.checkFormStatus(request.getFormId());
-        FormType type = form.getType();
         // 根据表单类型, 查找对应的表单数据处理器
-        FormHandler formHandler = getFormHandler(type);
+        FormHandler formHandler = getFormHandler(form.getType());
         // 根据表单数据处理器, 处理表单数据
-
-
         return formHandler.submit(request.getFormData(), form);
     }
 
@@ -45,6 +44,6 @@ public class FormDataServiceImpl extends ServiceImpl<FormDataMapper, FormData> i
         return formHandlerObjectProvider.stream()
                 .filter(formHandler -> formHandler.match(type))
                 .findFirst()
-                .orElseThrow(()->new BizException(ErrorCode.FORM_HANDLER_NOT_FOUND));
+                .orElseThrow(() -> new BizException(ErrorCode.FORM_HANDLER_NOT_FOUND));
     }
 }

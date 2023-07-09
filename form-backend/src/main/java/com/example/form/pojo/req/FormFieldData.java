@@ -9,5 +9,6 @@ import lombok.Data;
 @Data
 public class FormFieldData {
     private String fieldKey;
+    private Integer versionId;
     private String data;
 }

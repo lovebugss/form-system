@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @ApiModel(value = "表单字段", description = "")
 @TableName("form_fields")
 @Data
-public class FormFields implements Serializable {
+public class FormField implements Serializable {
     /**
      * 主键ID
      */
@@ -32,6 +32,9 @@ public class FormFields implements Serializable {
      */
     @ApiModelProperty(name = "表单ID", notes = "")
     private Integer formId;
+    /**
+     * key
+     */
     private String formKey;
     /**
      * 版本ID
