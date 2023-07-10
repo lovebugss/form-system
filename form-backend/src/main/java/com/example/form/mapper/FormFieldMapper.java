@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.example.form.entity.FormFields;
+import com.example.form.entity.FormField;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,7 +15,7 @@ import org.apache.ibatis.annotations.Param;
  * @date : 2023-7-9
  */
 @Mapper
-public interface FormFieldsMapper extends BaseMapper<FormFields> {
+public interface FormFieldMapper extends BaseMapper<FormField> {
     /**
      * 分页查询指定行数据
      *
@@ -23,5 +23,5 @@ public interface FormFieldsMapper extends BaseMapper<FormFields> {
      * @param wrapper 动态查询条件
      * @return 分页对象列表
      */
-    IPage<FormFields> selectByPage(IPage<FormFields> page, @Param(Constants.WRAPPER) Wrapper<FormFields> wrapper);
+    IPage<FormField> selectByPage(IPage<FormField> page, @Param(Constants.WRAPPER) Wrapper<FormField> wrapper);
 }

@@ -1,11 +1,11 @@
 package com.example.form.service.form;
 
 import com.example.form.entity.Form;
-import com.example.form.entity.FormFields;
+import com.example.form.entity.FormField;
 import com.example.form.enums.FormType;
 import com.example.form.pojo.req.FormFieldData;
 import com.example.form.pojo.vo.SubmitFormDataVo;
-import com.example.form.service.FormFieldsService;
+import com.example.form.service.FormFieldService;
 import com.example.form.service.form.check.FormFieldChecker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -22,8 +22,8 @@ import java.util.List;
 @Slf4j
 public class QuestionnaireFormHandler extends AbstractFormHandler {
 
-    public QuestionnaireFormHandler(FormFieldsService formFieldsService, List<FormFieldChecker> formFieldCheckers) {
-        super(formFieldsService, formFieldCheckers);
+    public QuestionnaireFormHandler(FormFieldService formFieldService, List<FormFieldChecker> formFieldCheckers) {
+        super(formFieldService, formFieldCheckers);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class QuestionnaireFormHandler extends AbstractFormHandler {
     }
 
     @Override
-    protected SubmitFormDataVo responseWrapper(Form form, List<FormFields> formFields, List<FormFieldData> formData) {
+    protected SubmitFormDataVo responseWrapper(Form form, List<FormField> formFields, List<FormFieldData> formData) {
         return null;
     }
 

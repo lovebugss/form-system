@@ -1,8 +1,7 @@
 package com.example.form.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.form.entity.FormFields;
+import com.example.form.entity.FormField;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ import java.util.List;
  * - @author : <a [href="mailto:r979668507@gmail.com](mailto:href=%22mailto:r979668507@gmail.com)">renjp</a>
  * - @date: 2023-7-9
  */
-public interface FormFieldsService extends IService<FormFields> {
+public interface FormFieldService extends IService<FormField> {
 
 
     /**
@@ -19,5 +18,5 @@ public interface FormFieldsService extends IService<FormFields> {
      * @param id
      * @return
      */
-    List<FormFields> getFormFields(Integer id);
+    List<FormField> getFormFields(Integer id);
 }
