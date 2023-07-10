@@ -18,6 +18,14 @@ export default defineConfig({
     siderWidth: 208,
     ...defaultSettings,
   },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM",
+  },
+  headScripts: [
+      {"src":"https://unpkg.com/react@18/umd/react.production.min.js"},
+      {"src":"https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"},
+  ],
   // https://umijs.org/zh-CN/plugins/plugin-locale
   locale: {
     // default zh-CN
@@ -305,6 +313,12 @@ export default defineConfig({
           icon: 'smile',
           path: '/editor/koni',
           component: './editor/koni',
+        },
+        {
+          name: 'form',
+          icon: 'smile',
+          path: '/editor/form',
+          component: './editor/form',
         },
       ],
     },
