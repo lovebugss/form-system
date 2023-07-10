@@ -5,25 +5,15 @@
 * padding: 20px
 */
 import React from 'react';
-import SchemaBuilder from '@xrenders/schema-builder';
-import Generator from 'fr-generator';
 import { PageContainer } from '@ant-design/pro-layout';
 import styles from './index.less';
+import {DesignForm} from '@/components/DesignForm/core';
 
-const defaultValue = {
-  type: 'object',
-  properties: {
-    inputName: {
-      title: '简单输入框',
-      type: 'string',
-    },
-  },
-};
 const FormDesign = () => {
   return (
   <PageContainer>
     <div className={styles.editor} style={{height: '80vh' }}>
-      <SchemaBuilder defaultValue={defaultValue} importBtn={true} exportBtn={true} pubBtn={false}/>
+      <DesignForm/>
     </div>
     </PageContainer>
   );
