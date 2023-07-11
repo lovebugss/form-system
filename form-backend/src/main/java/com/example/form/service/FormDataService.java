@@ -1,7 +1,7 @@
 package com.example.form.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.form.entity.FormData;
+import com.example.form.pojo.entity.FormData;
 import com.example.form.pojo.req.SubmitFormDataRequest;
 import com.example.form.pojo.vo.SubmitFormDataVo;
 

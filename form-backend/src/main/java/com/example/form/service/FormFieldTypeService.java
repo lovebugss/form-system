@@ -1,7 +1,7 @@
 package com.example.form.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.form.entity.FormFieldTypes;
+import com.example.form.pojo.entity.FormFieldTypes;
 
 /**
  * - 表单字段类型;(form_field_types)表服务接口

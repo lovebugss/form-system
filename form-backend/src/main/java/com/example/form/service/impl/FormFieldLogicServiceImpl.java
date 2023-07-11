@@ -1,12 +1,7 @@
 package com.example.form.service.impl;
 
-import cn.hutool.core.util.StrUtil;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.form.entity.FormFieldLogic;
+import com.example.form.pojo.entity.FormFieldLogic;
 import com.example.form.mapper.FormFieldLogicMapper;
 import com.example.form.service.FormFieldLogicService;
 import org.springframework.stereotype.Service;

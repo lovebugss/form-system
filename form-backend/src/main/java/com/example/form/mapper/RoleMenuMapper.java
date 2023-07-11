@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import com.example.form.entity.RoleMenu;
+import com.example.form.pojo.entity.RoleMenu;
 
  /**
  * 角色菜单映射;(role_menu)表数据库访问层

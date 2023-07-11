@@ -1,11 +1,12 @@
 import Icons from '../icons'
+import FileTextTwoTone from '@ant-design/icons'
 
 // 通用组件
 const commonComponents: Component[] = [
   {
     label: '按钮',
     type: 'Button',
-    icon: Icons.Button,
+    icon:  <FileTextTwoTone />,
     onclick: () => {console.log('Button')},
     config: {
       children: '按钮',
@@ -1152,7 +1153,7 @@ export type Component = {
   key?: string
   label: string
   type: string
-  icon: string
+  icon: any
   config?: Record<string, any>
   remoteConfig?: Record<string, any>
   formItemConfig?: Record<string, any>

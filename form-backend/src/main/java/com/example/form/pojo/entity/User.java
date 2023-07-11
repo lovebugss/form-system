@@ -1,10 +1,11 @@
-package com.example.form.entity;
+package com.example.form.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -15,36 +16,18 @@ import java.time.LocalDateTime;
  * @author : http://www.chiner.pro
  * @date : 2023-5-30
  */
+@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "用户", description = "")
 @TableName("user")
 @Data
-public class User implements Serializable {
+public class User extends BaseAuditEntity implements Serializable {
+
     /**
      * 主键ID
      */
     @ApiModelProperty(name = "主键ID", notes = "")
     @TableId
     private Integer id;
-    /**
-     * 创建人
-     */
-    @ApiModelProperty(name = "创建人", notes = "")
-    private Integer createdBy;
-    /**
-     * 创建时间
-     */
-    @ApiModelProperty(name = "创建时间", notes = "")
-    private LocalDateTime createdTime;
-    /**
-     * 更新人
-     */
-    @ApiModelProperty(name = "更新人", notes = "")
-    private Integer updatedBy;
-    /**
-     * 更新时间
-     */
-    @ApiModelProperty(name = "更新时间", notes = "")
-    private LocalDateTime updatedTime;
     /**
      * 用户名称
      */
@@ -63,6 +46,7 @@ public class User implements Serializable {
      * 是否禁用
      */
     @ApiModelProperty(name = "是否禁用", notes = "")
-    private String disabled;
+    private Boolean disabled;
+
 
 }

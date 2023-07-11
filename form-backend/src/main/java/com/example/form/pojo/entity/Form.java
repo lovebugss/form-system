@@ -1,4 +1,4 @@
-package com.example.form.entity;
+package com.example.form.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,6 +8,7 @@ import com.example.form.enums.FormType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -21,7 +22,8 @@ import java.time.LocalDateTime;
 @ApiModel(value = "表单", description = "")
 @TableName("form")
 @Data
-public class Form implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class Form extends BaseAuditEntity implements Serializable {
     /**
      * ID
      */
@@ -43,6 +45,9 @@ public class Form implements Serializable {
      */
     @ApiModelProperty(name = "表单类型", notes = "表单类型")
     private FormType type;
+
+    @ApiModelProperty(name= "scheme", notes = "")
+    private String scheme;
     /**
      * 表单状态
      */
@@ -58,25 +63,6 @@ public class Form implements Serializable {
      */
     @ApiModelProperty(name = "表单结束时间", notes = "")
     private LocalDateTime endTime;
-    /**
-     * 创建人
-     */
-    @ApiModelProperty(name = "创建人", notes = "")
-    private Integer createdBy;
-    /**
-     * 创建时间
-     */
-    @ApiModelProperty(name = "创建时间", notes = "")
-    private LocalDateTime createdTime;
-    /**
-     * 更新人
-     */
-    @ApiModelProperty(name = "更新人", notes = "")
-    private Integer updatedBy;
-    /**
-     * 更新时间
-     */
-    @ApiModelProperty(name = "更新时间", notes = "")
-    private LocalDateTime updatedTime;
+
 
 }

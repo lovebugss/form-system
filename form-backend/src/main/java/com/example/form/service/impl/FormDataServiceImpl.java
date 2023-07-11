@@ -1,8 +1,8 @@
 package com.example.form.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.form.entity.Form;
-import com.example.form.entity.FormData;
+import com.example.form.pojo.entity.Form;
+import com.example.form.pojo.entity.FormData;
 import com.example.form.enums.FormType;
 import com.example.form.exception.BizException;
 import com.example.form.mapper.FormDataMapper;

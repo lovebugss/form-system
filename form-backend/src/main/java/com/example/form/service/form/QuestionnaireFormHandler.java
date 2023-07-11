@@ -1,7 +1,7 @@
 package com.example.form.service.form;
 
-import com.example.form.entity.Form;
-import com.example.form.entity.FormField;
+import com.example.form.pojo.entity.Form;
+import com.example.form.pojo.entity.FormField;
 import com.example.form.enums.FormType;
 import com.example.form.pojo.req.FormFieldData;
 import com.example.form.pojo.vo.SubmitFormDataVo;

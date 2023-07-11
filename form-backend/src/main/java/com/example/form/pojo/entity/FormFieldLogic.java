@@ -1,4 +1,4 @@
-package com.example.form.entity;
+package com.example.form.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -16,10 +17,11 @@ import java.time.LocalDateTime;
  * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
  * @date : 2023-7-9
  */
+@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "字段逻辑", description = "")
 @TableName("form_field_logic")
 @Data
-public class FormFieldLogic implements Serializable {
+public class FormFieldLogic extends BaseAuditEntity  implements Serializable {
     /**
      * 主键ID;注解ID
      */
@@ -56,25 +58,5 @@ public class FormFieldLogic implements Serializable {
      */
     @ApiModelProperty(name = "版本id", notes = "")
     private String versionId;
-    /**
-     * 创建人;创建人
-     */
-    @ApiModelProperty(name = "创建人", notes = "创建人")
-    private Integer createdBy;
-    /**
-     * 创建时间;创建时间
-     */
-    @ApiModelProperty(name = "创建时间", notes = "创建时间")
-    private LocalDateTime createdTime;
-    /**
-     * 更新人;修改人
-     */
-    @ApiModelProperty(name = "更新人", notes = "修改人")
-    private Integer updatedBy;
-    /**
-     * 更新时间;修改时间
-     */
-    @ApiModelProperty(name = "更新时间", notes = "修改时间")
-    private LocalDateTime updatedTime;
 
 }

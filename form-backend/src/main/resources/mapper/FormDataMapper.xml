@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.form.mapper.FormDataMapper">
-    <select id="selectByPage" resultType="com.example.form.entity.FormData">
+    <select id="selectByPage" resultType="com.example.form.pojo.entity.FormData">
         select * from form_data ${ew.customSqlSegment}
     </select>
 </mapper>

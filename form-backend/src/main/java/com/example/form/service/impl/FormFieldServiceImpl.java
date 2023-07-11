@@ -1,7 +1,7 @@
 package com.example.form.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.form.entity.FormField;
+import com.example.form.pojo.entity.FormField;
 import com.example.form.mapper.FormFieldMapper;
 import com.example.form.service.FormFieldService;
 import org.springframework.stereotype.Service;

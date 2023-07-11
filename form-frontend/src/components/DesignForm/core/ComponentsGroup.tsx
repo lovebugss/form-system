@@ -15,6 +15,7 @@ const ComponentsGroup: FC<Props> = (props) => {
 
   const sortableGroupDecorator = (instance: HTMLUListElement | null) => {
     if (instance) {
+      debugger
       const options: Sortable.Options = {
         sort: false,
         ghostClass: 'ghost',

@@ -1,6 +1,6 @@
 package com.example.form.service.form.check;
 
-import com.example.form.entity.FormField;
+import com.example.form.pojo.entity.FormField;
 import com.example.form.enums.FieldType;
 import com.example.form.exception.BizException;
 import com.example.form.pojo.req.FormFieldData;

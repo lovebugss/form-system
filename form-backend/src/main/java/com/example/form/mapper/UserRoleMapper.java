@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import com.example.form.entity.UserRole;
+import com.example.form.pojo.entity.UserRole;
 
  /**
  * 用户角色映射;(user_role)表数据库访问层

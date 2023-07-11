@@ -1,8 +1,7 @@
 package com.example.form.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.form.entity.FormFieldRule;
+import com.example.form.pojo.entity.FormFieldRule;
 
 /**
  * 字段规则;(form_field_rule)表服务接口

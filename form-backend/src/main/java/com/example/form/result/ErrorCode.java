@@ -8,7 +8,9 @@ package com.example.form.result;
 public enum ErrorCode {
     ERROR(500, "系统内部错误, 请联系管理员"),
     PARAM_ERROR(422, "参数错误"),
-    FORM_NOT_EXIST(40004, "表单不存在"), FORM_HANDLER_NOT_FOUND(50004, "表单处理器不存在");
+    FORM_NOT_EXIST(40004, "表单不存在"),
+    FORM_HANDLER_NOT_FOUND(50004, "表单处理器不存在"),
+    INVALID_FORM_SCHEME_TYPE(1, "无效的Scheme类型");
 
     private final int code;
     private final String message;

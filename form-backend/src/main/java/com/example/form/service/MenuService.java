@@ -1,7 +1,7 @@
 package com.example.form.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.form.entity.Menu;
+import com.example.form.pojo.entity.Menu;
 
  /**
  * 菜单;(menu)表服务接口

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.form.mapper.UserRoleMapper">
-     <select id="selectByPage" resultType="com.example.form.entity.UserRole">
+     <select id="selectByPage" resultType="com.example.form.pojo.entity.UserRole">
         select * from user ${ew.customSqlSegment}
     </select>
 </mapper>

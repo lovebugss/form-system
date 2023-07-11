@@ -1,4 +1,4 @@
-package com.example.form.entity;
+package com.example.form.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -7,6 +7,7 @@ import com.example.form.enums.FieldType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -17,10 +18,11 @@ import java.time.LocalDateTime;
  * @author : <a href="mailto:r979668507@gmail.com">renjp</a>
  * @date : 2023-7-9
  */
+@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "表单字段", description = "")
 @TableName("form_fields")
 @Data
-public class FormField implements Serializable {
+public class FormField extends BaseAuditEntity  implements Serializable {
     /**
      * 主键ID
      */
@@ -81,25 +83,5 @@ public class FormField implements Serializable {
      */
     @ApiModelProperty(name = "顺序", notes = "")
     private Integer order;
-    /**
-     * 创建人
-     */
-    @ApiModelProperty(name = "创建人", notes = "")
-    private Integer createdBy;
-    /**
-     * 创建时间
-     */
-    @ApiModelProperty(name = "创建时间", notes = "")
-    private LocalDateTime createdTime;
-    /**
-     * 更新人
-     */
-    @ApiModelProperty(name = "更新人", notes = "")
-    private Integer updatedBy;
-    /**
-     * 更新时间
-     */
-    @ApiModelProperty(name = "更新时间", notes = "")
-    private LocalDateTime updatedTime;
 
 }

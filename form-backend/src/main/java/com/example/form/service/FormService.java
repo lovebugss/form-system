@@ -1,14 +1,14 @@
 package com.example.form.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.form.entity.Form;
+import com.example.form.pojo.entity.Form;
+import com.example.form.pojo.dto.CreateFormDTO;
 
 /**
  * - 表单;(form)表服务接口
  * - @author : <a [href="mailto:r979668507@gmail.com](mailto:href=%22mailto:r979668507@gmail.com)">renjp</a>
  * - @date: 2023-7-9
  */
-public interface FormService extends IService<Form> {
+public interface FormService {
 
 
     /**
@@ -20,4 +20,11 @@ public interface FormService extends IService<Form> {
      * @param formId
      */
     Form checkFormStatus(String formId);
+
+    /**
+     * 创建表单
+     *
+     * @param parse
+     */
+    void create(CreateFormDTO parse);
 }

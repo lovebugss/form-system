@@ -1,8 +1,7 @@
 package com.example.form.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.form.entity.FormVersions;
+import com.example.form.pojo.entity.FormVersions;
 
 /**
  * - 表单版本;(form_versions)表服务接口

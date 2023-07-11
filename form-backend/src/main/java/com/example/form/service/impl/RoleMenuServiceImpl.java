@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWrapper;
-import com.example.form.entity.RoleMenu;
+import com.example.form.pojo.entity.RoleMenu;
 import com.example.form.mapper.RoleMenuMapper;
 import com.example.form.service.RoleMenuService;
  /**

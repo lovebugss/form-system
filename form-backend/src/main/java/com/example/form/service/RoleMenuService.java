@@ -1,7 +1,7 @@
 package com.example.form.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.form.entity.RoleMenu;
+import com.example.form.pojo.entity.RoleMenu;
 
  /**
  * 角色菜单映射;(role_menu)表服务接口
